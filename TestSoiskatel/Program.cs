@@ -1,24 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Linq;
-using System.Net.Mime;
-using System.Text;
-using Microsoft.EntityFrameworkCore.Query.Internal;
-using Microsoft.VisualBasic;
-using Npgsql;
+﻿using Npgsql;
 
 namespace Program
 {
     class Program
     {
-        const string connString = "Server=localhost;Port=5432;Database=postgres;Username=postgres;Password=zone2415;";
+        const string connString = "Server=192.168.12.211;Port=5432;Database=user77;Username=user77;Password=VZZG8C;";
         static void Main(string[] args)
         {
             Console.WriteLine("\nЗдраствуйте!");
             Found:
             Aut:
-            Console.WriteLine("\nВыберите действие:\n"+"1.Авторизация\n"+"2.Регистрация");
+            Console.WriteLine("\nВыберите действие:\n"+"1. Авторизация\n"+"2. Регистрация");
             
             int vod = Convert.ToInt32(Console.ReadLine());
             if (vod == 1)
@@ -30,7 +22,6 @@ namespace Program
                 string password = Console.ReadLine();
                 authenticateUser(login, password);
                 Console.ReadKey();
-                
             }
             else if (vod == 2)
             {
@@ -91,8 +82,8 @@ namespace Program
         {
             
             Console.WriteLine("Выберите действие:");
-            Console.WriteLine("1. Просмотреть результаты тестирования");
-            Console.WriteLine("2. Поиск результатов тестирования по имени");
+            Console.WriteLine("1. Создать тест");
+            Console.WriteLine("2. Просмотреть результаты тестирования");
             Console.WriteLine("3. Создать анализ результатов тестирования");
             Console.WriteLine("4. Выход");
 
@@ -101,7 +92,8 @@ namespace Program
             switch (choice)
             {
                 case 1:
-                    // Просмотреть результаты тестирования
+                    // Создать тест
+                    //createTest();
                     break;
 
                 case 2:
@@ -152,6 +144,24 @@ namespace Program
                 }
             }
             
+        }
+
+        public void createTest(string category, string testName, string question, string answer)
+        {
+            NpgsqlConnection conn = new NpgsqlConnection(connString);
+                try
+                {
+                    conn.Open();
+                    Console.WriteLine("Открытие базы данных");
+                }
+                catch (Exception e)
+                {
+                    Console.WriteLine(e);
+                    throw;
+                }
+                
+                string query = "INSERT INTO public.\"Tests\" (\"Categories\".\"Category\", \"Tests\".\"TestName\", \"Questions\".\"Question\", \"Answers\".\"AnswerName\") VALUES (@Category, @TestName, @Question, @Answer)";
+                
         }
         
     }

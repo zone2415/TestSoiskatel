@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "F:\\zone2415\\TestSoiskatel\\TestSoiskatel\\TestSoiskatel.csproj": {}
+    "/home/gr606_kusan/RiderProjects/TestSoiskatel/TestSoiskatel/TestSoiskatel.csproj": {}
   },
   "projects": {
-    "F:\\zone2415\\TestSoiskatel\\TestSoiskatel\\TestSoiskatel.csproj": {
+    "/home/gr606_kusan/RiderProjects/TestSoiskatel/TestSoiskatel/TestSoiskatel.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\zone2415\\TestSoiskatel\\TestSoiskatel\\TestSoiskatel.csproj",
+        "projectUniqueName": "/home/gr606_kusan/RiderProjects/TestSoiskatel/TestSoiskatel/TestSoiskatel.csproj",
         "projectName": "TestSoiskatel",
-        "projectPath": "F:\\zone2415\\TestSoiskatel\\TestSoiskatel\\TestSoiskatel.csproj",
-        "packagesPath": "C:\\Users\\zone2415\\.nuget\\packages\\",
-        "outputPath": "F:\\zone2415\\TestSoiskatel\\TestSoiskatel\\obj\\",
+        "projectPath": "/home/gr606_kusan/RiderProjects/TestSoiskatel/TestSoiskatel/TestSoiskatel.csproj",
+        "packagesPath": "/home/gr606_kusan/.nuget/packages/",
+        "outputPath": "/home/gr606_kusan/RiderProjects/TestSoiskatel/TestSoiskatel/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\zone2415\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "/home/gr606_kusan/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
@@ -63,7 +63,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Users\\zone2415\\.dotnet\\sdk\\6.0.402\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/7.0.100/RuntimeIdentifierGraph.json"
         }
       }
     }
